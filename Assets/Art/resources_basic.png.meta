@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -2318,8 +2318,9 @@ TextureImporter:
       resources_basic_60: -1921590377
       resources_basic_79: 995468495
       resources_basic_71: 1970299366
-      resources_basic_80: 1278900339
+      resources_basic_84: 302046648
       resources_basic_34: 1253510590
+      resources_basic_80: 1278900339
       resources_basic_58: 2106200508
       resources_basic_6: 423751181
       resources_basic_68: -1702248015
@@ -2327,17 +2328,16 @@ TextureImporter:
       resources_basic_0: -413945894
       resources_basic_92: -118980764
       resources_basic_12: 1817628217
+      resources_basic_73: -1568247175
       resources_basic_43: -1007735908
       resources_basic_39: -862441221
       resources_basic_62: -1288995804
       resources_basic_61: 849718040
       resources_basic_72: 1022913108
-      resources_basic_73: -1568247175
       resources_basic_14: 1941427473
       resources_basic_25: 1804499381
       resources_basic_18: 1573437629
       resources_basic_85: -739851310
-      resources_basic_84: 302046648
       resources_basic_15: 1461231122
       resources_basic_48: 1501908927
       resources_basic_97: -1892968138
@@ -2367,9 +2367,9 @@ TextureImporter:
       resources_basic_66: 1178725213
       resources_basic_53: 191060540
       resources_basic_50: -1658468370
+      resources_basic_82: -702018748
       resources_basic_32: 1017980143
       resources_basic_64: 1850552508
-      resources_basic_82: -702018748
       resources_basic_89: 1416784159
       resources_basic_3: -1898749038
       resources_basic_98: 1619895701
