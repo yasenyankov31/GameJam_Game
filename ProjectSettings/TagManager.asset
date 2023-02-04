@@ -9,6 +9,7 @@ TagManager:
   - Amulet
   - temp
   - StartPoint
+    - Rope
   layers:
   - Default
   - TransparentFX

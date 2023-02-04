@@ -20,9 +20,9 @@ public class Revive : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("resetPosition", true);
-        var render = GameObject.FindWithTag("Player").gameObject.GetComponentInChildren<SpriteRenderer>(true);
-        Debug.Log(render);
-        render.gameObject.SetActive(true);
+        //var render = GameObject.FindWithTag("Player").gameObject.GetComponentInChildren<SpriteRenderer>(true);
+        //Debug.Log(render);
+        //render.gameObject.SetActive(true);
         //render.transform.Translate(-10.68f, 9.89f, 0f);
     }
 
