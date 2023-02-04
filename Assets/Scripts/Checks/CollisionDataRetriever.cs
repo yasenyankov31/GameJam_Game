@@ -15,7 +15,8 @@ public class CollisionDataRetriever : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (PlayerLocomotion.isAlive)
+        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
+        if (isAlive)
         {
             EvaluateCollision(collision);
             RetrieveFriction(collision);
@@ -23,7 +24,8 @@ public class CollisionDataRetriever : MonoBehaviour
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if (PlayerLocomotion.isAlive)
+        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
+        if (isAlive)
         {
             EvaluateCollision(collision);
             RetrieveFriction(collision);
@@ -32,7 +34,8 @@ public class CollisionDataRetriever : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (PlayerLocomotion.isAlive)
+        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
+        if (isAlive)
         {
             onGround = false;
             friction = 0;
@@ -42,7 +45,8 @@ public class CollisionDataRetriever : MonoBehaviour
 
     public void EvaluateCollision(Collision2D collision)
     {
-        if (PlayerLocomotion.isAlive)
+        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
+        if (isAlive)
         {
             for (int i = 0; i < collision.contactCount; i++)
             {
@@ -55,7 +59,8 @@ public class CollisionDataRetriever : MonoBehaviour
 
     private void RetrieveFriction(Collision2D collision)
     {
-        if (PlayerLocomotion.isAlive)
+        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
+        if (isAlive)
         {
             PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
             friction = 0;
