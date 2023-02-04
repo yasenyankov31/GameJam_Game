@@ -107,7 +107,7 @@ public class PlayerLocomotion : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
-            DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
+            //DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
             transform.localScale = localScale;
         }
     }
