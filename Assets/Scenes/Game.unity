@@ -1310,6 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1405b5af48084e84483de4205ca067c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerLocomotion: {fileID: 1633698633}
   ContactNormal: {x: 0, y: 0}
   onGround: 0
   onWall: 0
@@ -1326,6 +1327,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 19201ddfbf4b77d4a8ec984318dbad7a, type: 2}
+  DestroyZone: {fileID: 1633698637}
+  isAlive: 0
   _maxSpeed: 11.5
   _maxAcceleration: 66.2
   _maxAirAcceleration: 20

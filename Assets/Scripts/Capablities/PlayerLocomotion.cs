@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
-
+    [Header("General")]
     [SerializeField] private InputController input = null;
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
+    public BoxCollider2D DestroyZone;
+    public bool isAlive;
 
     [Header("Movement")]
     [SerializeField, Range(0f, 100f)] private float _maxSpeed = 4f;
@@ -47,7 +49,8 @@ public class PlayerLocomotion : MonoBehaviour
         _ground = GetComponent<CollisionDataRetriever>();
 
         _defaultGravityScale = 1f;
-
+        
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -95,13 +98,13 @@ public class PlayerLocomotion : MonoBehaviour
     }
     public void Flip()
     {
-
         if (isFacingRight && input.RetieveMoveInput() < 0f || !isFacingRight
             && input.RetieveMoveInput() > 0f)
         {
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
+            DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
             transform.localScale = localScale;
         }
     }
@@ -215,4 +218,13 @@ public class PlayerLocomotion : MonoBehaviour
     }
     #endregion
 
+    #region Activity
+
+    public void Die()
+    {
+        isAlive = false;
+        gameObject.SetActive(false);
+    }
+
+    #endregion
 }
