@@ -5,8 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
-  - Rope
+  - Danger
   - Amulet
+  - temp
+  - StartPoint
+    - Rope
   layers:
   - Default
   - TransparentFX
