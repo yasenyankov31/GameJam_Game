@@ -9,7 +9,6 @@ public class PlayerLocomotion : MonoBehaviour
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
     public BoxCollider2D DestroyZone;
-    public bool isAlive;
 
     [Header("Movement")]
     [SerializeField, Range(0f, 100f)] private float _maxSpeed = 4f;
@@ -18,6 +17,8 @@ public class PlayerLocomotion : MonoBehaviour
     private Vector2 _direction, _desiredVelocity, _velocity;
     private float _maxSpeedChange, _acceleration;
     private bool isFacingRight = true;
+    public Animator animator;
+    public SpriteRenderer render;
 
     [Header("Jumping")]
     [SerializeField, Range(0f, 10f)] private float _jumpHeight = 3f;
@@ -49,8 +50,6 @@ public class PlayerLocomotion : MonoBehaviour
         _ground = GetComponent<CollisionDataRetriever>();
 
         _defaultGravityScale = 1f;
-        
-        isAlive = true;
     }
 
     // Update is called once per frame
@@ -64,8 +63,12 @@ public class PlayerLocomotion : MonoBehaviour
         {
             Flip();
         }
-        
 
+        var shouldReset = animator.GetBool("resetPosition");
+        if (shouldReset)
+        {
+            Revive();
+        }
     }
 
     private void FixedUpdate()
@@ -104,7 +107,7 @@ public class PlayerLocomotion : MonoBehaviour
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
-            DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
+            //DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
             transform.localScale = localScale;
         }
     }
@@ -222,8 +225,17 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void Die()
     {
-        isAlive = false;
-        gameObject.SetActive(false);
+        animator.SetBool("isAlive", false);
+        render.gameObject.SetActive(false);
+    }
+
+    public void Revive()
+    {
+        render.gameObject.SetActive(true);
+        animator.SetBool("isAlive", true);
+        animator.SetBool("resetPosition", false);
+        GameObject.FindGameObjectWithTag("StartPoint").gameObject.transform.GetPositionAndRotation(out Vector3 startPoint, out Quaternion rotation);
+        this.gameObject.transform.position = startPoint;
     }
 
     #endregion
