@@ -4,48 +4,65 @@ using UnityEngine;
 
 public class CollisionDataRetriever : MonoBehaviour
 {
-
+    public PlayerLocomotion PlayerLocomotion;
     public Vector2 ContactNormal;
     public bool onGround;
     public bool onWall;
     private float friction;
-
+    private void Start()
+    {
+        PlayerLocomotion=GetComponent<PlayerLocomotion>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        EvaluateCollision(collision);
-        RetrieveFriction(collision);
+        if (PlayerLocomotion.isAlive)
+        {
+            EvaluateCollision(collision);
+            RetrieveFriction(collision);
+        }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        EvaluateCollision(collision);
-        RetrieveFriction(collision);
+        if (PlayerLocomotion.isAlive)
+        {
+            EvaluateCollision(collision);
+            RetrieveFriction(collision);
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        onGround = false;
-        friction = 0;
-        onWall = false;
+        if (PlayerLocomotion.isAlive)
+        {
+            onGround = false;
+            friction = 0;
+            onWall = false;
+        }
     }
 
     public void EvaluateCollision(Collision2D collision)
     {
-        for (int i = 0; i < collision.contactCount; i++)
+        if (PlayerLocomotion.isAlive)
         {
-            ContactNormal = collision.GetContact(i).normal;
-            onGround |= ContactNormal.y >= 0.9f;
-            onWall = Mathf.Abs(ContactNormal.x) >= 0.9f;
+            for (int i = 0; i < collision.contactCount; i++)
+            {
+                ContactNormal = collision.GetContact(i).normal;
+                onGround |= ContactNormal.y >= 0.9f;
+                onWall = Mathf.Abs(ContactNormal.x) >= 0.9f;
+            }
         }
-    
     }
 
     private void RetrieveFriction(Collision2D collision)
     {
-        PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
-        friction = 0;
-        if (material!=null)
+        if (PlayerLocomotion.isAlive)
         {
-            friction = material.friction;
+            PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
+            friction = 0;
+            if (material != null)
+            {
+                friction = material.friction;
+            }
         }
     }
 

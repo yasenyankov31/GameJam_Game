@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PlayerLocomotion : MonoBehaviour
 {
-
+    [Header("General")]
     [SerializeField] private InputController input = null;
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
+    public bool isAlive;
 
     [Header("Movement")]
     [SerializeField, Range(0f, 100f)] private float _maxSpeed = 4f;
@@ -47,7 +48,8 @@ public class PlayerLocomotion : MonoBehaviour
         _ground = GetComponent<CollisionDataRetriever>();
 
         _defaultGravityScale = 1f;
-
+        
+        isAlive = true;
     }
 
     // Update is called once per frame
@@ -215,4 +217,13 @@ public class PlayerLocomotion : MonoBehaviour
     }
     #endregion
 
+    #region Activity
+
+    public void Die()
+    {
+        isAlive = false;
+        gameObject.SetActive(false);
+    }
+
+    #endregion
 }
