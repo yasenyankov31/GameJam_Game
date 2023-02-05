@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerLocomotion : MonoBehaviour
 {
@@ -80,13 +81,6 @@ public class PlayerLocomotion : MonoBehaviour
             Revive();
         }
 
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            animator.SetBool("isMoving", true);
-        } else
-        {
-            animator.SetBool("isMoving", false);
-        }
     }
 
     private void FixedUpdate()
@@ -260,19 +254,16 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void Die()
     {
+        
         _body.isKinematic = true;
+        _body.velocity = Vector2.zero;
         animator.SetBool("isAlive", false);
         render.gameObject.SetActive(false);
     }
 
     public void Revive()
     {
-        _body.isKinematic = false;
-        render.gameObject.SetActive(true);
-        animator.SetBool("isAlive", true);
-        animator.SetBool("resetPosition", false);
-        GameObject.FindGameObjectWithTag("StartPoint").gameObject.transform.GetPositionAndRotation(out Vector3 startPoint, out Quaternion rotation);
-        this.gameObject.transform.position = startPoint;
+        SceneManager.LoadScene(2);
     }
 
     #endregion

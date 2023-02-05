@@ -11,6 +11,7 @@ TagManager:
   - StartPoint - Rope
   - Rope
   - StartPoint
+  - Boulder
   layers:
   - Default
   - TransparentFX

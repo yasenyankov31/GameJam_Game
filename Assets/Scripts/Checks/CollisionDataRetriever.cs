@@ -59,16 +59,13 @@ public class CollisionDataRetriever : MonoBehaviour
 
     private void RetrieveFriction(Collision2D collision)
     {
-        var isAlive = PlayerLocomotion.animator.GetBool("isAlive");
-        if (isAlive)
+        PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
+        friction = 0;
+        if (material != null)
         {
-            PhysicsMaterial2D material = collision.rigidbody.sharedMaterial;
-            friction = 0;
-            if (material != null)
-            {
-                friction = material.friction;
-            }
+            friction = material.friction;
         }
+
     }
 
     public bool GetOnGround()
