@@ -98,11 +98,7 @@ public class PlayerLocomotion : MonoBehaviour
     {
         if (isAlive)
         {
-            if (!isBarbarian)
-            {
-                JumpLogic();
-            }
-            
+            JumpLogic();
             if (!isWallJumping)
             {
                 MovementLogic();
