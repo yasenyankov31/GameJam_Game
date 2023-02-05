@@ -17,7 +17,7 @@ public class GrabAndThrow : MonoBehaviour
     }
     private void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0)&&hasAmulet)
+        if (Input.GetKeyDown(KeyCode.J)&&hasAmulet)
         {
             hasAmulet = false;
             sprite.enabled = false;
