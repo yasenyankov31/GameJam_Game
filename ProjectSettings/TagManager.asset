@@ -8,8 +8,9 @@ TagManager:
   - Danger
   - Amulet
   - temp
+  - StartPoint - Rope
+  - Rope
   - StartPoint
-    - Rope
   layers:
   - Default
   - TransparentFX
