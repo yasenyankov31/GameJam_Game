@@ -206,6 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: 19201ddfbf4b77d4a8ec984318dbad7a, type: 2}
   DestroyZone: {fileID: 0}
+  LevelIndex: 0
   _maxSpeed: 11.5
   _maxAcceleration: 66.2
   _maxAirAcceleration: 20
@@ -223,6 +224,9 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 64
+  isMonkey: 0
+  isHuman: 0
+  isBarbarian: 0
 --- !u!114 &2133544777347351190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +344,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 1700327899, guid: edcd93dca4e843848947d52747a980e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 48cec8f694faf4c4f80228b57117f557, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

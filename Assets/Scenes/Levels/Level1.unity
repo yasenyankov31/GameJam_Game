@@ -1532,7 +1532,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 18
-      m_TileSpriteIndex: 19
+      m_TileSpriteIndex: 24
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2565,8 +2565,8 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 906428925, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 58
     m_Data: {fileID: 869714264, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
   - m_RefCount: 37
@@ -2575,8 +2575,8 @@ Tilemap:
     m_Data: {fileID: 35275156, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: -654676398, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 906428925, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
   - m_RefCount: 25
     m_Data: {fileID: -512901102, guid: 437f6382f8db2c34881d79384c7ea70a, type: 3}
   - m_RefCount: 1
@@ -2840,6 +2840,7 @@ GameObject:
   - component: {fileID: 697314416}
   - component: {fileID: 697314418}
   - component: {fileID: 697314419}
+  - component: {fileID: 697314420}
   m_Layer: 6
   m_Name: Danger
   m_TagString: Untagged
@@ -3189,6 +3190,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c223057486c4edc4699978ff5837ae99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &697314420
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697314414}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1001 &1008189077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3196,9 +3218,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307063101604052636, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -1.2236185
+      objectReference: {fileID: 0}
+    - target: {fileID: 307063101604052636, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.6539545
+      objectReference: {fileID: 0}
     - target: {fileID: 307063101781213818, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
       propertyPath: m_Name
       value: jungle_rope
+      objectReference: {fileID: 0}
+    - target: {fileID: 307063101781213818, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
+      propertyPath: m_TagString
+      value: Rope
       objectReference: {fileID: 0}
     - target: {fileID: 307063101781213820, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
       propertyPath: m_SortingOrder
@@ -3247,6 +3281,14 @@ PrefabInstance:
     - target: {fileID: 307063101781213823, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 307063102671169378, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.95545936
+      objectReference: {fileID: 0}
+    - target: {fileID: 307063102671169378, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 0.000000031145134
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a508c2062d85caf429481cce0ac718e0, type: 3}
@@ -3695,6 +3737,10 @@ PrefabInstance:
       propertyPath: animator
       value: 
       objectReference: {fileID: 624859659}
+    - target: {fileID: 2133544777347351191, guid: 82b2fb6f097d4884dbd3d2f5609eedb2, type: 3}
+      propertyPath: LevelIndex
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2133544777347351193, guid: 82b2fb6f097d4884dbd3d2f5609eedb2, type: 3}
       propertyPath: m_RootOrder
       value: 1

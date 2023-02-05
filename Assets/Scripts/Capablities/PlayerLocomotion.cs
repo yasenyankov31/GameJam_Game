@@ -11,6 +11,7 @@ public class PlayerLocomotion : MonoBehaviour
     private CollisionDataRetriever _ground;
     public BoxCollider2D DestroyZone;
     private Animator playerAnimator;
+    public int LevelIndex;
 
     [Header("Movement")]
     [SerializeField, Range(0f, 100f)] private float _maxSpeed = 4f;
@@ -49,6 +50,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     [Header("Grab and Throw")]
     private GrabAndThrow shootScript;
+
+    public bool isMonkey, isHuman, isBarbarian;
 
     
 
@@ -263,7 +266,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void Revive()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(LevelIndex);
     }
 
     #endregion
