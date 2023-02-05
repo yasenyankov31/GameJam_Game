@@ -43,9 +43,13 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+    [Header("Grab and Throw")]
+    private GrabAndThrow shootScript;
+
 
     void Start()
     {
+        shootScript = GetComponentInChildren<GrabAndThrow>();
         _body = GetComponent<Rigidbody2D>();
         _ground = GetComponent<CollisionDataRetriever>();
 
@@ -78,7 +82,7 @@ public class PlayerLocomotion : MonoBehaviour
         {
             MovementLogic();
         }
-        
+
     }
 
     #region Movement
@@ -104,10 +108,10 @@ public class PlayerLocomotion : MonoBehaviour
         if (isFacingRight && input.RetieveMoveInput() < 0f || !isFacingRight
             && input.RetieveMoveInput() > 0f)
         {
+            //shootScript.direction.x *= -1f;
             isFacingRight = !isFacingRight;
             Vector3 localScale = transform.localScale;
             localScale.x *= -1f;
-            //DestroyZone.offset.Set(DestroyZone.offset.x * -1f, DestroyZone.offset.y);
             transform.localScale = localScale;
         }
     }
@@ -205,6 +209,7 @@ public class PlayerLocomotion : MonoBehaviour
             wallJumpingCounter = 0f;
             if (transform.localScale.x != wallJumpingDirection)
             {
+                //shootScript.direction.x *= -1f;
                 isFacingRight = !isFacingRight;
                 Vector3 localScale = transform.localScale;
                 localScale.x *= -1f;
@@ -225,12 +230,14 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void Die()
     {
+        _body.isKinematic = true;
         animator.SetBool("isAlive", false);
         render.gameObject.SetActive(false);
     }
 
     public void Revive()
     {
+        _body.isKinematic = false;
         render.gameObject.SetActive(true);
         animator.SetBool("isAlive", true);
         animator.SetBool("resetPosition", false);

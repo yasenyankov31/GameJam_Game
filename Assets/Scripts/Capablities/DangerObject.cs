@@ -7,6 +7,10 @@ public class DangerObject : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.gameObject.GetComponent<PlayerLocomotion>().Die();
+        if (collision.gameObject.tag=="Player")
+        {
+            collision.gameObject.GetComponent<PlayerLocomotion>().Die();
+        }
+        
     }
 }

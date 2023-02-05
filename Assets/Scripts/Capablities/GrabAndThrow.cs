@@ -4,32 +4,53 @@ using UnityEngine;
 
 public class GrabAndThrow : MonoBehaviour
 {
+    public GameObject amulet;
+    public float launchForce;
+    public Transform shotPoint;
 
-    [SerializeField]
-    private Transform rayPoint;
+    public GameObject point;
+    GameObject[] points;
+    public int numberOfPoints;
+    public float spaceBetweenPoints;
+    public Vector2 direction;
 
-    [SerializeField]
-    private float rayDistance;
-
-        
-    public GameObject cube;
-    public float throwForce = 10f;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        points = new GameObject[numberOfPoints];
+        for (int i = 0; i < numberOfPoints; i++)
+        {
+            points[i] = Instantiate(point, shotPoint.position, Quaternion.identity);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        Vector2 bowPosition = transform.position;
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        direction = mousePosition - bowPosition;
+        transform.right = direction;
 
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
+        for (int i = 0; i < numberOfPoints; i++)
+        {
+            points[i].transform.position = PointPosition(i * spaceBetweenPoints);
+        }
     }
-
     public void Shoot()
     {
-        RaycastHit2D hitInfo = Physics2D.Raycast(rayPoint.position, transform.right, rayDistance);
+        GameObject newAmulet = Instantiate(amulet, shotPoint.position, shotPoint.rotation);
+        newAmulet.GetComponent<Rigidbody2D>().velocity = transform.right * launchForce;
+
     }
+    private Vector2 PointPosition(float t)
+    {
+        Vector2 position = (Vector2)shotPoint.position + (direction.normalized *launchForce* t ) + 0.5f * Physics2D.gravity * (t * t);
+        return position;
+    }
+
 }
 
