@@ -73,6 +73,14 @@ public class PlayerLocomotion : MonoBehaviour
         {
             Revive();
         }
+
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            animator.SetBool("isMoving", true);
+        } else
+        {
+            animator.SetBool("isMoving", false);
+        }
     }
 
     private void FixedUpdate()
