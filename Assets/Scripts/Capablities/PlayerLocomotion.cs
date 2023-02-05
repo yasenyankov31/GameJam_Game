@@ -92,6 +92,10 @@ public class PlayerLocomotion : MonoBehaviour
             Revive();
         }
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Die();
+        }
     }
 
     private void FixedUpdate()
