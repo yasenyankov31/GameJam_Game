@@ -10,7 +10,7 @@ public class PlayerLocomotion : MonoBehaviour
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
     public BoxCollider2D DestroyZone;
-    private Animator playerAnimator;
+    public Animator playerAnimator;
     public int LevelIndex;
 
     [Header("Movement")]
@@ -152,6 +152,7 @@ public class PlayerLocomotion : MonoBehaviour
 
         if (_onGround)
         {
+            playerAnimator.SetBool("isJumping", false);
             _jumpPhase = 0;
         }
 
@@ -179,6 +180,7 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void JumpAction()
     {
+        
         if (_onGround || _jumpPhase < _maxAirJumps)
         {
             _jumpPhase++;
@@ -251,6 +253,10 @@ public class PlayerLocomotion : MonoBehaviour
     #region Animation
     private void AnimationsFlags()
     {
+        if (input.RetieveJumpInput())
+        {
+            playerAnimator.SetBool("isJumping", true);
+        }
         if (input.RetieveMoveInput()!=0)
         {
             playerAnimator.SetBool("isMoving",true);

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwapPlayer : MonoBehaviour
 {
     private PlayerLocomotion player;
+    public Animator [] animators;
     private int index = 0;
     public bool canSwap = true;
 
@@ -26,25 +27,39 @@ public class SwapPlayer : MonoBehaviour
             switch (index)
             {
                 case 0:
+                    
                     Debug.Log("Varvarin");
                     player.isBarbarian = true;
                     player.isMonkey = false;
                     player.isHuman = false;
+                    animators[0].gameObject.SetActive(true);
+                    animators[1].gameObject.SetActive(false);
+                    animators[2].gameObject.SetActive(false);
+                    player.playerAnimator = animators[0];
                     break;
                 case 1:
                     Debug.Log("Monkey");
                     player.isBarbarian = false;
                     player.isMonkey = true;
                     player.isHuman = false;
+                    animators[0].gameObject.SetActive(false);
+                    animators[1].gameObject.SetActive(true);
+                    animators[2].gameObject.SetActive(false);
+                    player.playerAnimator = animators[1];
                     break;
                 case 2:
                     Debug.Log("Human");
                     player.isBarbarian = false;
                     player.isMonkey = false;
                     player.isHuman = true;
+                    animators[0].gameObject.SetActive(false);
+                    animators[1].gameObject.SetActive(false);
+                    animators[2].gameObject.SetActive(true);
+                    player.playerAnimator = animators[2];
                     break;
-
+    
             }
+            
             index++;
             StartCoroutine(SwapForms());
 
