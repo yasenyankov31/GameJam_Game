@@ -9,6 +9,7 @@ public class PlayerLocomotion : MonoBehaviour
     private Rigidbody2D _body;
     private CollisionDataRetriever _ground;
     public BoxCollider2D DestroyZone;
+    private Animator playerAnimator;
 
     [Header("Movement")]
     [SerializeField, Range(0f, 100f)] private float _maxSpeed = 4f;
@@ -43,12 +44,16 @@ public class PlayerLocomotion : MonoBehaviour
     [SerializeField] private Transform wallCheck;
     [SerializeField] private LayerMask wallLayer;
 
+
+
     [Header("Grab and Throw")]
     private GrabAndThrow shootScript;
 
+    
 
     void Start()
     {
+        playerAnimator = GetComponentInChildren<Animator>();
         shootScript = GetComponentInChildren<GrabAndThrow>();
         _body = GetComponent<Rigidbody2D>();
         _ground = GetComponent<CollisionDataRetriever>();
@@ -59,6 +64,7 @@ public class PlayerLocomotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        AnimationsFlags();
         JumpInput();
         MovementInput();
         WallSlide();
@@ -224,6 +230,22 @@ public class PlayerLocomotion : MonoBehaviour
         isWallJumping = false;
 
     }
+    #endregion
+
+    #region Animation
+    private void AnimationsFlags()
+    {
+        if (input.RetieveMoveInput()!=0)
+        {
+            playerAnimator.SetBool("isMoving",true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isMoving",false);
+        }
+        
+    }
+
     #endregion
 
     #region Activity
