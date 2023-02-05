@@ -18,7 +18,11 @@ public class SwapPlayer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && canSwap)
         {
+            if (index==3)
+            {
+                index = 0;
 
+            }
             switch (index)
             {
                 case 0:
@@ -39,9 +43,7 @@ public class SwapPlayer : MonoBehaviour
                     player.isMonkey = false;
                     player.isHuman = true;
                     break;
-                default:
-                    index = 0;
-                    break;
+
             }
             index++;
             StartCoroutine(SwapForms());
