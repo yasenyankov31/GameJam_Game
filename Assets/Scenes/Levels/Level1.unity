@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 450237655}
   m_Layer: 6
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4137,6 +4137,10 @@ PrefabInstance:
     - target: {fileID: 3213869459719375232, guid: c0393f71865d99247aee2e0ef415cecc, type: 3}
       propertyPath: m_Name
       value: Portal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3213869459719375236, guid: c0393f71865d99247aee2e0ef415cecc, type: 3}
+      propertyPath: NextlevelName
+      value: Level2
       objectReference: {fileID: 0}
     - target: {fileID: 3213869459719375238, guid: c0393f71865d99247aee2e0ef415cecc, type: 3}
       propertyPath: m_RootOrder
