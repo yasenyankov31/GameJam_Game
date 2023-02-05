@@ -4,43 +4,57 @@ using UnityEngine;
 
 public class SwapPlayer : MonoBehaviour
 {
-    public SpriteRenderer player;
-    public Sprite monkey;
-    public Sprite barbarian;
-    public Sprite human;
-    private int index;
-    private float delay = 1f;
-    private float timePassed = 0;
-    void Start()
+    private PlayerLocomotion player;
+    private int index = 0;
+    public bool canSwap = true;
+
+    private void Start()
     {
-        index = 0;
+        player = GetComponent<PlayerLocomotion>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && timePassed>=delay)
+        if (Input.GetKeyDown(KeyCode.E) && canSwap)
         {
-            if (index==0)
+
+            switch (index)
             {
-                player.sprite = monkey;
-                timePassed = 0f;
-                index++;
+                case 0:
+                    Debug.Log("Varvarin");
+                    player.isBarbarian = true;
+                    player.isMonkey = false;
+                    player.isHuman = false;
+                    break;
+                case 1:
+                    Debug.Log("Monkey");
+                    player.isBarbarian = false;
+                    player.isMonkey = true;
+                    player.isHuman = false;
+                    break;
+                case 2:
+                    Debug.Log("Human");
+                    player.isBarbarian = false;
+                    player.isMonkey = false;
+                    player.isHuman = true;
+                    break;
+                default:
+                    index = 0;
+                    break;
             }
-            else if (index==1)
-            {
-                player.sprite = barbarian;
-                timePassed = 0f;
-                index++;
-            }
-            else if (index ==2)
-            {
-                player.sprite = human;
-                timePassed = 0f;
-                index = 0;
-            }
+            index++;
+            StartCoroutine(SwapForms());
+
         }
 
-        timePassed += Time.deltaTime;
+    }
+    IEnumerator SwapForms()
+    {
+        canSwap = false;
+
+        yield return new WaitForSeconds(1);
+
+        canSwap = true;
     }
 }

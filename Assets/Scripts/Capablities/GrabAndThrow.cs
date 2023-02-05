@@ -17,13 +17,19 @@ public class GrabAndThrow : MonoBehaviour
     }
     private void Shoot()
     {
-        if (Input.GetKeyDown(KeyCode.J)&&hasAmulet)
+        if (Input.GetKeyDown(KeyCode.J))
         {
-            hasAmulet = false;
-            sprite.enabled = false;
-            float x = GetComponentInParent<PlayerLocomotion>().transform.localScale.x;
-            GameObject amuletIns = Instantiate(amulet, firePoint.position, firePoint.rotation);
-            amuletIns.GetComponent<Rigidbody2D>().AddForce(x * transform.right * AmuletSpeed);
+            PlayerLocomotion player = GetComponentInParent<PlayerLocomotion>();
+            if (hasAmulet && player.isHuman)
+            {
+                hasAmulet = false;
+                sprite.enabled = false;
+                float x = GetComponentInParent<PlayerLocomotion>().transform.localScale.x;
+                GameObject amuletIns = Instantiate(amulet, firePoint.position, firePoint.rotation);
+                amuletIns.GetComponent<Rigidbody2D>().AddForce(x * transform.right * AmuletSpeed);
+            }
+            
+
         }
     }
 

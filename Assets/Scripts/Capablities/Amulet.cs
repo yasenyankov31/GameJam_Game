@@ -26,12 +26,16 @@ public class Amulet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag=="Player")
+        GameObject player = collision.gameObject;
+        if (player.tag=="Player")
         {
+            if (player.GetComponent<PlayerLocomotion>().isHuman)
+            {
+                player.GetComponentInChildren<GrabAndThrow>().hasAmulet = true;
+                player.GetComponentInChildren<GrabAndThrow>().sprite.enabled = true;
+                Destroy(this.gameObject);
+            }
 
-            collision.gameObject.GetComponentInChildren<GrabAndThrow>().hasAmulet=true;
-            collision.gameObject.GetComponentInChildren<GrabAndThrow>().sprite.enabled = true;
-            Destroy(this.gameObject);
         }
     }
 }

@@ -51,7 +51,7 @@ public class PlayerLocomotion : MonoBehaviour
     [Header("Grab and Throw")]
     private GrabAndThrow shootScript;
 
-    public bool isMonkey, isHuman, isBarbarian,isAlive=true;
+    public bool isMonkey, isHuman=true, isBarbarian,isAlive=true;
 
     
 
@@ -73,8 +73,12 @@ public class PlayerLocomotion : MonoBehaviour
             AnimationsFlags();
             JumpInput();
             MovementInput();
-            WallSlide();
-            WallJump();
+            if (isMonkey)
+            {
+                WallSlide();
+                WallJump();
+            }
+
             if (!isWallJumping)
             {
                 Flip();

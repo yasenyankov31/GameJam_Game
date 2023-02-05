@@ -9,9 +9,11 @@ public class RopeSwing : MonoBehaviour
     [SerializeField]private HingeJoint2D parentJoint;
     [SerializeField] private Transform parent;
     [SerializeField] private int JumpSwingRange;
+    private PlayerLocomotion player;
 
     private bool isSwinging;
     private float wallJumpingDirection;
+    private bool dropBool;
 
     void Start()
     {
@@ -21,6 +23,12 @@ public class RopeSwing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dropBool && parentJoint != null)
+        {
+            dropBool = false;
+            parentJoint.breakForce = 1;
+            StartCoroutine(ResetSwing());
+        }
         if (isSwinging && Input.GetButtonDown("Jump")&& parentJoint!=null)
         {
             wallJumpingDirection = transform.localScale.x;
@@ -33,6 +41,7 @@ public class RopeSwing : MonoBehaviour
 
             
         }
+
     }
     public static float Map(float value, float from1, float to1, float from2, float to2)
     {
@@ -41,7 +50,8 @@ public class RopeSwing : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Rope" && !isSwinging)
+        player = GetComponentInParent<PlayerLocomotion>();
+        if (collision.gameObject.tag == "Rope" && !isSwinging&&player.isMonkey)
         {
             isSwinging = true;
             HingeJoint2D hingeJoint = collision.gameObject.AddComponent<HingeJoint2D>();
@@ -50,6 +60,15 @@ public class RopeSwing : MonoBehaviour
             parent = collision.gameObject.transform.parent;
 
         }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        player = GetComponentInParent<PlayerLocomotion>();
+        if (!player.isMonkey&&isSwinging)
+        {
+            dropBool = true;
+        }
+
     }
 
     IEnumerator ResetSwing()

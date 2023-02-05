@@ -121,6 +121,7 @@ GameObject:
   - component: {fileID: 2133544777347351186}
   - component: {fileID: 2133544777347351187}
   - component: {fileID: 1480578152534834015}
+  - component: {fileID: 1300710923066822599}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -226,7 +227,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isMonkey: 0
-  isHuman: 0
+  isHuman: 1
   isBarbarian: 0
   isAlive: 1
 --- !u!114 &2133544777347351190
@@ -295,6 +296,19 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &1300710923066822599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133544777347351197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 730f9a035a2b381468e3e4db581e3345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canSwap: 1
 --- !u!1 &2133544777596117950
 GameObject:
   m_ObjectHideFlags: 0
