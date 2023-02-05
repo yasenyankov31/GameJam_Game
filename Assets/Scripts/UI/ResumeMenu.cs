@@ -13,7 +13,12 @@ public class ResumeMenu : MonoBehaviour
     {
         isStopped = false;
     }
-    public void ContinueGame()
+
+    private void Update()
+    {
+        ResumeWithEsc();
+    }
+    public void BackToMenu()
     {
         SceneManager.LoadScene(backToMenu);
     }
@@ -26,7 +31,7 @@ public class ResumeMenu : MonoBehaviour
             Time.timeScale = 0;
             isStopped = true;
         }
-        else if (Input.GetKey(KeyCode.Escape) && isStopped)
+        else if (Input.GetKeyDown(KeyCode.Escape) && isStopped)
         {
             CanvasResume.SetActive(false);
             Time.timeScale = 1;
