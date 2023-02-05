@@ -23,7 +23,7 @@ public class Teleport : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Amolet")
+        if (collision.gameObject.tag == "Amulet")
         {
             port.enabled = true;
             isOpened = true;

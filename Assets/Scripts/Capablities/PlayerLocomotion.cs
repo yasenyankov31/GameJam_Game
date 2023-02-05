@@ -51,7 +51,7 @@ public class PlayerLocomotion : MonoBehaviour
     [Header("Grab and Throw")]
     private GrabAndThrow shootScript;
 
-    public bool isMonkey, isHuman, isBarbarian;
+    public bool isMonkey, isHuman, isBarbarian,isAlive=true;
 
     
 
@@ -68,16 +68,20 @@ public class PlayerLocomotion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        AnimationsFlags();
-        JumpInput();
-        MovementInput();
-        WallSlide();
-        WallJump();
-        if (!isWallJumping)
+        if (isAlive)
         {
-            Flip();
-        }
+            AnimationsFlags();
+            JumpInput();
+            MovementInput();
+            WallSlide();
+            WallJump();
+            if (!isWallJumping)
+            {
+                Flip();
+            }
 
+
+        }
         var shouldReset = animator.GetBool("resetPosition");
         if (shouldReset)
         {
@@ -88,10 +92,13 @@ public class PlayerLocomotion : MonoBehaviour
 
     private void FixedUpdate()
     {
-        JumpLogic();
-        if (!isWallJumping)
+        if (isAlive)
         {
-            MovementLogic();
+            JumpLogic();
+            if (!isWallJumping)
+            {
+                MovementLogic();
+            }
         }
 
     }
@@ -257,9 +264,8 @@ public class PlayerLocomotion : MonoBehaviour
 
     public void Die()
     {
-        
-        _body.isKinematic = true;
-        _body.velocity = Vector2.zero;
+        isAlive = false;
+        _body.bodyType = RigidbodyType2D.Static;
         animator.SetBool("isAlive", false);
         render.gameObject.SetActive(false);
     }

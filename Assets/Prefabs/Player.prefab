@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 2133544777347351190}
   - component: {fileID: 2133544777347351186}
   - component: {fileID: 2133544777347351187}
+  - component: {fileID: 1480578152534834015}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -158,7 +159,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043032765, y: -0.11467266}
+  m_Offset: {x: -0.043032765, y: -0.097810686}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -169,7 +170,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8247216, y: 2.255289}
+  m_Size: {x: 0.8247216, y: 2.2215652}
   m_EdgeRadius: 0
 --- !u!50 &2133544777347351194
 Rigidbody2D:
@@ -227,6 +228,7 @@ MonoBehaviour:
   isMonkey: 0
   isHuman: 0
   isBarbarian: 0
+  isAlive: 1
 --- !u!114 &2133544777347351190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +273,28 @@ MonoBehaviour:
   parentJoint: {fileID: 0}
   parent: {fileID: 0}
   JumpSwingRange: 50
+--- !u!68 &1480578152534834015
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133544777347351197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: -1.26}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.42, y: 0}
+  - {x: 0.41, y: 0}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &2133544777596117950
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 2133544777948320299}
-  amulet: {fileID: 1387038509270720425, guid: 698a70cfc110771489d83b18a11328fb, type: 3}
+  amulet: {fileID: 3798873399070566401, guid: c335b5923366ab044b79b2c075a993fc, type: 3}
   AmuletSpeed: 1000
   hasAmulet: 0
   sprite: {fileID: 2133544777596117948}
