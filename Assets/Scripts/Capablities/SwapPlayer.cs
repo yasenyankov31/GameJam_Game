@@ -55,7 +55,7 @@ public class SwapPlayer : MonoBehaviour
     {
         canSwap = false;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
         canSwap = true;
     }

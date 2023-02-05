@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1d67b4b987437294c9c67196d59bc817
+guid: cbe2806a42cdcc8429e341c992388ac6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: avatar_0
+      name: avata3_0
       rect:
         serializedVersion: 2
         x: 16
@@ -131,14 +131,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: daf7e82f22dcad846aa4ea4f4e05f091
-      internalID: -85900591
+      spriteID: c0663019539a6654690631d00cd4e393
+      internalID: -1750595609
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_1
+      name: avata3_1
       rect:
         serializedVersion: 2
         x: 34
@@ -152,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 822fb253fdc237e498c5d5a97ab0db4f
-      internalID: -712000291
+      spriteID: ab97f264d13861b4db517221b89f70ea
+      internalID: 1976377741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_2
+      name: avata3_2
       rect:
         serializedVersion: 2
         x: 50
@@ -173,14 +173,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2853c51c2c2f69b40892956cd4d2ea42
-      internalID: 1154820309
+      spriteID: f9f82236d6eb2c842b6234f120ad3344
+      internalID: -1020524986
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_3
+      name: avata3_3
       rect:
         serializedVersion: 2
         x: 67
@@ -194,14 +194,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd2896c6d5867ff499dab2ef38a7441c
-      internalID: -76391068
+      spriteID: e29c5193be1d18f4ba50ff0b57b2161d
+      internalID: -1119836033
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_4
+      name: avata3_4
       rect:
         serializedVersion: 2
         x: 81
@@ -215,14 +215,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 736cf226ee3955f40839898b00fee7f4
-      internalID: -1100558995
+      spriteID: 0202a82ce8028a14ba8b5a3aab4586a4
+      internalID: -1648541469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_5
+      name: avata3_5
       rect:
         serializedVersion: 2
         x: 96
@@ -236,14 +236,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75c3065295176984684a9c856d7414aa
-      internalID: -110146614
+      spriteID: 6a740551a7a5c134d872be8c705e5774
+      internalID: 108737394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_6
+      name: avata3_6
       rect:
         serializedVersion: 2
         x: 66
@@ -257,35 +257,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08cb736e829462845a6b9d36fa17a951
-      internalID: 868771686
+      spriteID: 2a26c7fb48f279e4eab2b0639f7773da
+      internalID: 117306513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_7
-      rect:
-        serializedVersion: 2
-        x: 83
-        y: 65
-        width: 12
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f846275165cd20744ba6bb708ca7ee01
-      internalID: 1596681001
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: avatar_8
+      name: avata3_7
       rect:
         serializedVersion: 2
         x: 99
@@ -299,14 +278,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0c2b57b896eb5d459ed9e5c5640fa0b
-      internalID: 1201245698
+      spriteID: 2563c224a1e4fb444a4ff827db24d7fc
+      internalID: 1923767161
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_9
+      name: avata3_8
       rect:
         serializedVersion: 2
         x: 5
@@ -320,14 +299,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09b186b5091dcd542a6f910d6fce5d29
-      internalID: 270984460
+      spriteID: e0329bffe35f37548900029624f2901f
+      internalID: 1324730354
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_10
+      name: avata3_9
       rect:
         serializedVersion: 2
         x: 23
@@ -341,14 +320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec7d5ee4c1160674aaba6c16a735a0b3
-      internalID: -173900462
+      spriteID: 0d7293083d04122438b026760f24c5e1
+      internalID: 2054695140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_11
+      name: avata3_10
       rect:
         serializedVersion: 2
         x: 39
@@ -362,20 +341,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8247390c534f85c49be0ea42e5ad6a84
-      internalID: 1079009790
+      spriteID: f3d4ab58404d4cb41bca5ce01943c984
+      internalID: 2066862755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_12
+      name: avata3_11
       rect:
         serializedVersion: 2
         x: 96
-        y: 39
-        width: 16
-        height: 24
+        y: 48
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,14 +362,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c1ecb377fcea134987fbc27323eb967
-      internalID: 628970339
+      spriteID: 7637eff62feefe84085b0878eba8e023
+      internalID: 579997199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_13
+      name: avata3_12
       rect:
         serializedVersion: 2
         x: 16
@@ -404,14 +383,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7cc21f86a3502a94d8f983fddf23c70a
-      internalID: 1055789149
+      spriteID: 41aa1384f09fa224086d9934befc0779
+      internalID: 2028166952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_14
+      name: avata3_13
       rect:
         serializedVersion: 2
         x: 34
@@ -425,14 +404,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6a4456d85c7c2d4a811708d75964b76
-      internalID: 756464282
+      spriteID: 8c4b1f46d1d4e0d40a65cf4956153962
+      internalID: -1247584584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_15
+      name: avata3_14
       rect:
         serializedVersion: 2
         x: 50
@@ -446,18 +425,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb1644809a60703409145a2947510d7f
-      internalID: -1035859645
+      spriteID: 35d4abe32998c3243a40501969a19fc0
+      internalID: 265043788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: avatar_16
+      name: avata3_15
       rect:
         serializedVersion: 2
-        x: 77
-        y: 21
+        x: 78
+        y: 24
         width: 13
         height: 9
       alignment: 0
@@ -467,8 +446,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75e0874c2f0b54e4088112b81fa04f15
-      internalID: 1125447664
+      spriteID: 44062a51a767bba4e8d8b340c2d58512
+      internalID: -259454220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: avata3_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 18
+        width: 15
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44d38f8d96d65947b3941b314dc494f
+      internalID: 110008760
       vertices: []
       indices: 
       edges: []
@@ -484,23 +484,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      avatar_7: 1596681001
-      avatar_13: 1055789149
-      avatar_12: 628970339
-      avatar_14: 756464282
-      avatar_4: -1100558995
-      avatar_3: -76391068
-      avatar_1: -712000291
-      avatar_6: 868771686
-      avatar_11: 1079009790
-      avatar_5: -110146614
-      avatar_2: 1154820309
-      avatar_16: 1125447664
-      avatar_10: -173900462
-      avatar_9: 270984460
-      avatar_8: 1201245698
-      avatar_0: -85900591
-      avatar_15: -1035859645
+      avata3_10: 2066862755
+      avata3_3: -1119836033
+      avata3_9: 2054695140
+      avata3_1: 1976377741
+      avata3_11: 579997199
+      avata3_6: 117306513
+      avata3_12: 2028166952
+      avata3_13: -1247584584
+      avata3_16: 110008760
+      avata3_4: -1648541469
+      avata3_2: -1020524986
+      avata3_5: 108737394
+      avata3_14: 265043788
+      avata3_8: 1324730354
+      avata3_7: 1923767161
+      avata3_0: -1750595609
+      avata3_15: -259454220
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
