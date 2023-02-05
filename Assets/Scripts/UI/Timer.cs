@@ -18,6 +18,6 @@ public class Timer : MonoBehaviour
     {
         Minutes = Mathf.FloorToInt(timeToDisplay / 60);
         Seconds = Mathf.FloorToInt(timeToDisplay % 60);
-        timeText.text = string.Format("{0:00}:{1:00}", Minutes, Seconds);
+        timeText.text = string.Format("\n\n\n{0:00}:{1:00}", Minutes, Seconds);
     }
 }
