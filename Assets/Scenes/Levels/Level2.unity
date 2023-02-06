@@ -4889,6 +4889,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 203922206789355225, guid: 52138b0d1d6c6c44b8313c7a478207c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2047059631}
+    - target: {fileID: 203922206789355225, guid: 52138b0d1d6c6c44b8313c7a478207c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ResumeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 203922207163053979, guid: 52138b0d1d6c6c44b8313c7a478207c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2047059631}
+    - target: {fileID: 203922207163053979, guid: 52138b0d1d6c6c44b8313c7a478207c6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackToMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 203922207536941897, guid: 52138b0d1d6c6c44b8313c7a478207c6, type: 3}
       propertyPath: m_Pivot.x
       value: 0

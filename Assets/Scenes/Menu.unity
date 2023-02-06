@@ -806,7 +806,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   continue_name: Level1
+<<<<<<< HEAD
   scene_name: Level1
+=======
+  scene_name: SelectLevel
+>>>>>>> 8b5d359f569b9b30b1c4d188a1320fb2630ac9a0
   levels: []
 --- !u!1 &1457423859
 GameObject:
