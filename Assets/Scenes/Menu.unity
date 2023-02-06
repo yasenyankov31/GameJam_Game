@@ -805,8 +805,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d580ff228a28e9346bed0f519364d106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  continue_name: Game
-  scene_name: SelectLevel
+  continue_name: Level1
+  scene_name: Level1
   levels: []
 --- !u!1 &1457423859
 GameObject:
